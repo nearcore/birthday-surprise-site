@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import {
   Archive,
@@ -23,7 +22,7 @@ const records = [
     number: "01",
     era: "Recent Record",
     title: "The Workplace Crossover Episode",
-    src: "/photos/work-group.jpg",
+    src: "./photos/work-group.jpg",
     width: 1536,
     height: 1024,
     alt: "A group of coworkers posing together",
@@ -35,7 +34,7 @@ const records = [
     number: "02",
     era: "Recent Record",
     title: "Oʻahu’s Hottest Lighthouse Search",
-    src: "/photos/beach-day.jpg",
+    src: "./photos/beach-day.jpg",
     width: 1536,
     height: 1152,
     alt: "Two childhood friends taking a cheerful selfie at the beach",
@@ -47,7 +46,7 @@ const records = [
     number: "03",
     era: "Recent Record",
     title: "On the Way to the Ranch",
-    src: "/photos/walking-selfie.jpg",
+    src: "./photos/walking-selfie.jpg",
     width: 773,
     height: 1536,
     alt: "Two childhood friends taking a playful selfie while walking outdoors",
@@ -59,7 +58,7 @@ const records = [
     number: "04",
     era: "Recent Record",
     title: "Lunch at the Japanese Restaurant",
-    src: "/photos/japanese-dinner.jpg",
+    src: "./photos/japanese-dinner.jpg",
     width: 1536,
     height: 1286,
     alt: "Three friends posing together at a Japanese restaurant",
@@ -71,7 +70,7 @@ const records = [
     number: "05",
     era: "Older Record: Seminary Days",
     title: "The Chapel Was Closed, Class Was Not",
-    src: "/photos/seminary-plaza.jpg",
+    src: "./photos/seminary-plaza.jpg",
     width: 1536,
     height: 1152,
     alt: "A seminary class gathered around a table in the town plaza",
@@ -356,12 +355,12 @@ export default function Home() {
                 <article className="open-record">
                   <div className="record-photo-wrap">
                     <div className="evidence-tag">Exhibit {record.number}</div>
-                    <Image
+                    <img
                       src={record.src}
                       alt={record.alt}
                       width={record.width}
                       height={record.height}
-                      priority={currentRecord === 0}
+                      loading={currentRecord === 0 ? "eager" : "lazy"}
                       className="record-photo"
                     />
                     <div className="stamp">{record.stamp}</div>
@@ -414,7 +413,7 @@ export default function Home() {
               </div>
               <div className="gif-frame">
                 <div className="recording-dot">RECOVERED FOOTAGE</div>
-                <img src="/photos/ancient-record.webp" alt="A recovered animated memory from years ago" />
+                <img src="./photos/ancient-record.webp" alt="A recovered animated memory from years ago" />
                 <div className="gif-metadata">
                   FORMAT: ANIMATED ARTIFACT • QUALITY: 144P-ISH<br />
                   Pastilan, parang walang nagbago sa itsura mo. HAHAHA

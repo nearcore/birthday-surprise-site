@@ -1,4 +1,4 @@
-# Birthday Surprise Site
+# Kaarawan ni Keisha
 
 A playful birthday website built from shared memories.
 
@@ -26,4 +26,4 @@ The photographs and animated archive are stored in `public/photos` and are part 
 
 ## Published website
 
-The website is hosted separately so the birthday recipient can open it without access to this private repository.
+The website is published directly with GitHub Pages.
